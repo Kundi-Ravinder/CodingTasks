@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Sticky Notes</title>
+    </head>
+    <body>
+    <!--Nav bar-->
+    <nav class="navbar bg-body-tertiary" style="background-color: #e6ffe6;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Sticky Notes</a>
+          <a class="nav-link active" aria-current="page" href="/new/">New Note</a>
+          
+          <div id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/admin/">Admin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Main-->
+    <main class="container">
+        {% block content %} {% endblock %}
+    </main>
+
+
+    <!--Footer-->
+    <Footer>
+        <div class="footer">
+            <p>&copy; 2024 RK</p>
+        </div
+    </Footer>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+14)
+HTTP perserve the state of application response and request cycle,authenication and session management
+
+User build a HTTP request of information to be generted by the server. When server recieve that request, 
+it use the information to build the response are requested and sent back to the user with the information and status code.
+Application user credentials are stored in databse when user request the session its check with crenditials ,store in set cookies and session Id generted 
+it send back to the browser application. 
+
+
+15) Django database migeration to sever_based relation database like MaraiDB
+	
+   
+	I have installed virtual enviorment for my project using-pip install virtualenvwrapper-win		
+	named virtual enviorment as - mkvitualenv notes_env
+	to run virtual envoirment used the command -workon notes_env
+	for project install django framework-pip install django
+	downloaded my sqlclient - pip install django mysqlclient
+	startup my project with -django-admin startproject sticky_notes
+	Change the folder for my project using-cd sticky_notes
+	search for settings.py file in sticky_notes project
+	Change the database settings in file from Sqllite to mysqlclient or postgers
+	after these changes made have to execute python command makemigerations in the project 
+	with migrate is allow us to operation perfom any changes we made earlier in the stickey_note project
+	with the help of manage file runserver for my sticky_notes project login to admin account 
+	
+	

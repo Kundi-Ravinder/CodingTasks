@@ -1,0 +1,72 @@
+
+14)
+HTTP perserve the state of application
+The client usually stores and sends the token as an HTTP cookie and 
+sends it as a parameter in GET or POSt queries 
+
+request and response cycle:
+Interaction between the client which in this case is our browser and server,
+where the client send an HTTP request to server and the server responds with an staus code.
+
+concerning user authenication and session management: 
+User authentication process involve validating the provided credentials
+ against user data stored in the application's database. Session are generated 
+ and stored on the server, allowing the srver to keep track of and authorize 
+ the user request. After creating session set a cookie that contains the 
+ session ID and sends it to the browser
+ 
+
+15) Django database migeration to sever_based relation database like MaraiDB
+	
+	create virtual enviorment for your project in the terminal
+	command:
+		>pip install virtualenvwrapper-win		
+		>mkvitualenv name_env
+		>workon name_env
+	
+	
+	for project install django framework
+	command:
+	
+		>pip install django
+		>pip install django mysqlclient
+		
+	Create and statup project
+	command:
+		>django-admin startproject project_name
+		>cd project_name
+		
+	Project_name/project_name/settings.py
+	 In settings file-scroll down for Database
+	 
+		DATABASES = {
+			'default': {
+				'ENGINE': 'django.db.backends.sqlite3',
+				'NAME': BASE_DIR / 'db.sqlite3',
+			}
+		}
+	
+	
+		TO CHANGE DATABASE
+		
+		DATABASES = {
+			'default': {
+				'ENGINE': 'django.db.backends.mysql',
+				'NAME': 'project_name',
+				'USER':'project_user',
+				'PASSWORD':'pasword',
+				'HOST': 'localhost',
+				'PORT':'5432',
+			}
+		}
+	
+	Migrate the database to the project
+	command:
+		>python manage.py makemigerations
+		>python manage.py migrate
+		(Install and creates any necessary database table according 
+		to the settings in your project_name)
+		
+	>python manage.py runserver
+	
+	

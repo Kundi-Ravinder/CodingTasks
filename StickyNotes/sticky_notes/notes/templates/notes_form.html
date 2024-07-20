@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h4>{{page_title}}</h4>
+<section>
+    <!--form-->
+    <form action ="{% if form.instance.pk %}
+                        {% url 'update_note' pk=form.instance.pk %}
+                    {% else %}
+                        {% url 'create_note' %}
+                    {% endif %}" method="post">
+
+        {% csrf_token %}
+        
+        {{form.as_p}}
+        <!--save button-->
+        <button type="submit" class="btn btn-outline-primary">Save</button>
+        <a  type="button" class="btn btn-outline-primary" a href="{% url 'notes' %}" role="button">Back</a>
+    </form>
+</section>
+
+{% endblock %}

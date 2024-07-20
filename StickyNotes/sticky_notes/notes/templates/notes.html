@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--note view-->
+<div>
+    <h2>
+        {{note.title}}
+    </h2>
+
+    <p><b>Description:</b></p>
+    <p>{{note.description}}</p>
+
+    <p><b>Created by:</b></p>
+    <aside>{{note.created_by}}</aside>
+
+</div>
+<div> 
+    <a  type="button" class="btn btn-outline-primary" a href="{% url 'notes' %}" role="button">Back</a>
+</div>
+
+{% endblock %}
